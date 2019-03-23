@@ -1,0 +1,45 @@
+If you are getting the error "The database server appears to be offline" while accessing mutillidae
+
+Please go to the bin directory of mysql in wamp
+
+(normally it will be in C: directory by default , Use your computer's path to wamp)
+
+For example, in my computer, I have used the commands
+
+cd C:\wamp64\bin\mysql\mysql5.7.21\bin
+
+Now it will be at the prompt C:\wamp64\bin\mysql\mysql5.7.21\bin> 
+
+Type the following commands:
+
+mysql -u root
+
+use mysql
+
+update user set authentication string=PASSWORD('multillidae') where user='root';
+
+update user set plugin='mysql_native_password' where user='root';
+
+flush privileges;
+
+quit;
+
+Then try to access mutillidae 
+
+
+
+
+
+
+
+
+
+If you have installed apache2 standalone in linux, the web folder path will be "htdocs" rather than "www"
+
+OR 
+
+some distros will have it in  /opt/lampp/htdocs
+
+OR
+
+some distros may be having it in  /var/www
